@@ -9,6 +9,8 @@
 }
 \date{21st June 2023}
 
+\usepackage{tikz}
+
 \begin{document}
 	
 	\frame{\titlepage}
@@ -26,6 +28,20 @@
 	
 	\begin{frame}
 		\frametitle{Automatic Dose Optimization for Radiotherapy}
+		
+		\begin{tikzpicture}[node distance=4cm]
+			\node (inputs) [draw,double,rounded corners] {\begin{tabular}{l} \textbf{Data} \\ Scan \\ Contours \end{tabular}};
+			\node (process) [right of=inputs,draw,rounded corners] {Optimization};
+			\node (outputs) [right of=process,draw,double,rounded corners] {Treatment plan};
+			
+			\draw [thick,->] (inputs) -- (process);
+			\draw [thick,->] (process) -- (outputs);
+			
+			\node (human) [,below of=process,draw,rounded corners] {Constraints' weights adjusting};
+			
+			\draw [double,<-] (process) -- (human);
+			
+		\end{tikzpicture}
 		
 	\end{frame}
 	
