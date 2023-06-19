@@ -63,14 +63,21 @@
 		\frametitle{Problem Formulation}
 		\framesubtitle{IMRT (bis)}
 		
-		Objective (for \textit{maximum} constraint $c$ on structure $s$, dose $d$):
+		Objective for \textit{maximum} constraint $c$ on structure $s$, dose $d$:
 		$$f_c(\textbf{y}) = \frac{1}{|\mathcal{V}|} \sum_{v \in \mathcal{V}} (\textbf{y}_v-d)_+^2$$
-		(reverse sign for minimal constraint)
+		(reverse sign for minimal constraint).
 		\vspace{0.5cm}
 		
 		Final objective:
 		$$f(\textbf{y}) = \sum_{c \in \mathcal{C}} w_c f_c(\textbf{y})$$
 		with $w_c$ the weight of constraint $c$.
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Problem Optimization}
+		
+		\includegraphics[width=11cm]{figures/ICMProstate-iter.pdf}
 		
 	\end{frame}
 	
