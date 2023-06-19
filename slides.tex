@@ -37,7 +37,7 @@
 			\draw [thick,->] (inputs) -- (process);
 			\draw [thick,->] (process) -- (outputs);
 			
-			\node (human) [,below of=process,draw,rounded corners] {Constraints' weights adjusting};
+			\node (human) [below of=process,draw,rounded corners] {Constraints' weights adjusting};
 			
 			\draw [double,<-] (process) -- (human);
 			
@@ -93,5 +93,17 @@
 		\url{https://arxiv.org/abs/2305.18014}
 	
 	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Meta-Optimization}
+		\textbf{Usual optimization}
+		$$\min_{\textbf{x}} f(\textbf{x}, w) \text{ s.t. } \textbf{x} > 0$$
+		... and fine-tune $w$ until the dose is clinically acceptable
+		
+		\textbf{Meta}
+		$$\min_w \left\lbrace \min_{\textbf{x}} f(\textbf{x}, w) \text{ s.t. } \textbf{x} > 0 \right\rbrace $$
+	\end{frame}
+	
+	
 	
 \end{document}
