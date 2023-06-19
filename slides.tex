@@ -104,15 +104,19 @@
 		\frametitle{Meta-Optimization}
 		\textbf{Usual optimization}
 		$$\min_{\textbf{x}} f(\textbf{x}, w) \text{ s.t. } \textbf{x} > 0$$
-		... and fine-tune $w$ until the dose is clinically acceptable
+		... and fine-tune $w$ until the dose is clinically acceptable.
 		
-		\textbf{Meta}
+		\vspace{0.5cm}
+		
+		\textbf{Meta optimization}
 		$$\min_w \left\lbrace \min_{\textbf{x}} f(\textbf{x}, w) \text{ s.t. } \textbf{x} > 0 \right\rbrace $$
+		... still need to fine-tune the parameters (learning rate, momentum, etc...) of the meta-optimizer.
+		
 	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Dose Distances}
-	
+		
 		\begin{figure}
 			\vspace{-0.5cm}
 			\includegraphics[width=5cm]{figures/example\_bixels.pdf}
