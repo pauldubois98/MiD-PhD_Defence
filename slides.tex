@@ -50,9 +50,33 @@
 	
 	\subsection{Fluence discretization}
 	% fluence to bixels
+	
 	\subsection{FMO problem}
 	\subsubsection{Formulation}
-	% cost func
+		\begin{frame}
+		\frametitle{Problem Formulation}
+		\framesubtitle{IMRT}
+		Bixel values:
+		$$x_{i,j}^\theta \geq 0 \text{, for } \theta \in \Theta \text{ and } 1\leq i,j \leq 20\footnote{20x20 is a typical bixel discretization}$$
+		usually concatenated to a single bixels-value vector $x$.
+		\vspace{0.5cm}
+		
+		Dose calculation:
+		$$\textbf{y} = L\textbf{x} \text{ with } L \text{ (pre-calculated) dose-influence (DI) matrix}$$
+	\end{frame}
+	\begin{frame}
+		\frametitle{Problem Formulation}
+		\framesubtitle{IMRT (bis)}
+		Objective for \textit{maximum} constraint $c$ on structure $s$, dose $d$:
+		$$f_c(\textbf{y}) = \frac{1}{|\mathcal{V}|} \sum_{v \in \mathcal{V}} (\textbf{y}_v-d)_+^2$$
+		(reverse sign for minimal constraint).
+		\vspace{0.5cm}
+		
+		Final objective:
+		$$f(\textbf{y}) = \sum_{c \in \mathcal{C}} w_c f_c(\textbf{y})$$
+		with $w_c$ the weight of constraint $c$.
+	\end{frame}
+	
 	\subsubsection{Optimization}
 	% DI matrix generation
 	
@@ -72,34 +96,7 @@
 	
 
 	
-	\begin{frame}
-		\frametitle{Problem Formulation}
-		\framesubtitle{IMRT}
-		
-		Bixel values:
-		$$x_{i,j}^\theta \geq 0 \text{, for } \theta \in \Theta \text{ and } 1\leq i,j \leq 20\footnote{20x20 is a typical bixel discretization}$$
-		usually concatenated to a single bixels-value vector $x$.
-		\vspace{0.5cm}
-		
-		Dose calculation:
-		$$\textbf{y} = L\textbf{x} \text{ with } L \text{ (pre-calculated) dose-influence (DI) matrix}$$
-		
-	\end{frame}
-	
-	\begin{frame}
-		\frametitle{Problem Formulation}
-		\framesubtitle{IMRT (bis)}
-		
-		Objective for \textit{maximum} constraint $c$ on structure $s$, dose $d$:
-		$$f_c(\textbf{y}) = \frac{1}{|\mathcal{V}|} \sum_{v \in \mathcal{V}} (\textbf{y}_v-d)_+^2$$
-		(reverse sign for minimal constraint).
-		\vspace{0.5cm}
-		
-		Final objective:
-		$$f(\textbf{y}) = \sum_{c \in \mathcal{C}} w_c f_c(\textbf{y})$$
-		with $w_c$ the weight of constraint $c$.
-		
-	\end{frame}
+
 	
 	\begin{frame}
 		\frametitle{Problem Optimization}
