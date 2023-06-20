@@ -113,7 +113,19 @@
 		$$\min_w \left\lbrace \min_{\textbf{x}} f(\textbf{x}, w) \text{ s.t. } \textbf{x} > 0 \right\rbrace $$
 		... still need to fine-tune the parameters (learning rate, momentum, etc...) of the meta-optimizer.
 	\end{frame}
-	% dose distance => Soon submitted?
+	
+	\subsection{Dose Distances}
+	\begin{frame}
+		\frametitle{Dose Distances}
+		\begin{figure}
+			\vspace{-0.5cm}
+			\includegraphics[width=5cm]{figures/example\_bixels.pdf}
+			\includegraphics[width=5cm]{figures/example\_3d\_doses.pdf}
+			\vspace{-0.3cm}
+			\includegraphics[width=6cm]{figures/example_dvh.pdf}
+			\caption{Example of two doses that have the same clinical effect (measured from the DVHs), but very different voxel-wise dose values.}
+		\end{figure}
+	\end{frame}
 	% dose clustering => finished writing!
 	% pareto appendix?
 	
@@ -133,20 +145,7 @@
 	
 	
 	
-	\begin{frame}
-		\frametitle{Dose Distances}
-		
-		\begin{figure}
-			\vspace{-0.5cm}
-			\includegraphics[width=5cm]{figures/example\_bixels.pdf}
-			\includegraphics[width=5cm]{figures/example\_3d\_doses.pdf}
-			\vspace{-0.3cm}
-			\includegraphics[width=6cm]{figures/example_dvh.pdf}
-			
-			\caption{Example of two doses that have the same clinical effect (measured from the DVHs), but very different voxel-wise dose values.}
-		\end{figure}
-		
-	\end{frame}
+	
 	
 	
 \end{document}
