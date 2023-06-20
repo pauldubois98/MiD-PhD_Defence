@@ -10,6 +10,7 @@
 \date{21st June 2023}
 
 \usepackage{tikz}
+\usepackage{multicol}
 
 \begin{document}
 	
@@ -17,7 +18,9 @@
 	
 	\begin{frame}
 		\frametitle{Outline}
-		\tableofcontents
+		\begin{multicols}{2}
+			\tableofcontents
+		\end{multicols}
 	\end{frame}
 
 	\section{Introduction}
@@ -29,8 +32,22 @@
 	\subsubsection{Sliding-windows}
 	\subsection{VMAT scheme}
 	\subsection{Radiotherapy workflow}
+	
 	\section{Problem Statement}
 	\subsection{Optimization workflow}
+		\begin{frame}
+		\frametitle{Automatic Dose Optimization for Radiotherapy}
+		\begin{tikzpicture}[node distance=4cm]
+			\node (inputs) [draw,double,rounded corners] {\begin{tabular}{l} \textbf{Data} \\ Scan \\ Contours \end{tabular}};
+			\node (process) [right of=inputs,draw,rounded corners] {Optimization};
+			\node (outputs) [right of=process,draw,double,rounded corners] {Treatment plan};
+			\draw [thick,->] (inputs) -- (process);
+			\draw [thick,->] (process) -- (outputs);
+			\node (human) [below of=process,draw,rounded corners] {Constraints' weights adjusting};
+			\draw [double,<-] (process) -- (human);
+		\end{tikzpicture}
+	\end{frame}
+	
 	\subsection{Fluence discretization}
 	% fluence to bixels
 	\subsection{FMO problem}
@@ -38,36 +55,22 @@
 	% cost func
 	\subsubsection{Optimization}
 	% DI matrix generation
+	
 	\section{Early results}
 	% optimizers comp' => ArXiV!!!
 	% dose distance => Soon submitted?
 	% dose clustering => finished writing!
 	% pareto appendix?
+	
 	\section{Future work}
 	% RL setup => normalization of constr; reward func
+	
 	\section{Others}
 	\subsection{Courses}
 	\subsection{Doctoral training}
-	\section*{References}
+	\section{References}
 	
-	\begin{frame}
-		\frametitle{Automatic Dose Optimization for Radiotherapy}
-		
-		\begin{tikzpicture}[node distance=4cm]
-			\node (inputs) [draw,double,rounded corners] {\begin{tabular}{l} \textbf{Data} \\ Scan \\ Contours \end{tabular}};
-			\node (process) [right of=inputs,draw,rounded corners] {Optimization};
-			\node (outputs) [right of=process,draw,double,rounded corners] {Treatment plan};
-			
-			\draw [thick,->] (inputs) -- (process);
-			\draw [thick,->] (process) -- (outputs);
-			
-			\node (human) [below of=process,draw,rounded corners] {Constraints' weights adjusting};
-			
-			\draw [double,<-] (process) -- (human);
-			
-		\end{tikzpicture}
-		
-	\end{frame}
+
 	
 	\begin{frame}
 		\frametitle{Problem Formulation}
