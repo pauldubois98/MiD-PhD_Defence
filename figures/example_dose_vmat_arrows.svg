@@ -34,7 +34,7 @@
      id="defs13"><marker
        style="overflow:visible"
        id="marker5805"
-       refX="0"
+       refX="-1"
        refY="0"
        orient="auto-start-reverse"
        inkscape:stockid="Arrow3"
@@ -43,7 +43,8 @@
        viewBox="0 0 4.2071068 7"
        inkscape:isstock="true"
        inkscape:collect="always"
-       preserveAspectRatio="xMidYMid"><path
+       preserveAspectRatio="xMidYMid"
+       markerUnits="strokeWidth"><path
          style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
          d="M 3,-3 0,0 3,3"
          id="path5803"
@@ -5073,5 +5074,5 @@ ywCi/wtVZac8tWtxRgAAAABJRU5ErkJggg==
        d="M 641.92771,25.710843 V 293.66265"
        id="path579" /><path
        id="path4975"
-       style="fill:none;stroke:#ececec;stroke-width:9.76715;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#marker5805)"
+       style="fill:none;stroke:#800000;stroke-width:9.767;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#marker5805);stroke-dasharray:39.06800079,78.13600159;stroke-dashoffset:0"
        d="M 753.86899,225.71999 A 161.03508,161.03508 0 0 1 788.77702,401.21444 161.03508,161.03508 0 0 1 640,500.62407 161.03508,161.03508 0 0 1 491.22299,401.21445 161.03508,161.03508 0 0 1 526.131,225.71999" /></g></svg>
