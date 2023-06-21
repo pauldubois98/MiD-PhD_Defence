@@ -145,8 +145,8 @@
 		\frametitle{Problem Formulation}
 		\framesubtitle{IMRT}
 		Bixel values:
-		$$x_{i,j}^\theta \geq 0 \text{, for } \theta \in \Theta \text{ and } 1\leq i,j \leq 20\footnote{20x20 is a typical bixel discretization}$$
-		usually concatenated to a single bixels-value vector $x$.
+		$$x_{i,j}^\theta \geq 0 \text{, for } \theta \in \Theta \text{ and } 1 \leq i \leq 20,\ 1 \leq j \leq \text{nb\_leafs\_involved}$$
+		usually concatenated to a single bixels-value vector $\textbf{x}$.
 		\vspace{0.5cm}
 		
 		Dose calculation:
